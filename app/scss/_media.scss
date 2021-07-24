@@ -1,0 +1,253 @@
+@media(max-width: 1700px) {
+    .leasing-offers{
+        &__brand-title{
+        font-size: 25px;
+        line-height: 35px;
+        max-width: 190px;
+    }
+    &__pricing{
+        &-text{
+            font-size: 8px;
+            line-height: 22px;
+            max-width: 90px;
+        }
+        &-sum{
+        font-size: 11px;
+        line-height: 22px; 
+     }   
+    }
+    &__payment{
+        &-title{
+            font-size: 16px;
+            line-height: 20px;
+        }
+        &-sum{
+            font-size: 25px;
+            line-height: 34px;
+        }
+        &-btn{
+            padding: 20px 30px 20px 30px;
+            font-size: 14px;
+        }
+    }
+}
+    
+}
+@media(max-width: 1290px){
+    .leasing-offers{
+        &__brand{
+            
+            &-title{
+                font-size: 23px;
+                line-height: 26px;
+                
+                
+            }
+            &-subtitle{
+                font-size: 16px;
+                line-height: 21px;
+                color: #828282;
+                
+            }
+            &-compare{
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    &__payment{
+        &-title{
+            font-size: 13px;
+            line-height: 20px;
+        }
+        &-sum{
+            font-size: 20px;
+            line-height: 29px;
+        }
+        &-btn{
+            padding: 10px 15px 10px 15px;
+            font-size: 14px;
+        }
+    }
+    &__pricing{
+        &-text{
+            
+            max-width: 80px;
+        }
+        &-sum{
+           font-size: 10px;
+        }
+    }
+}
+}
+@media(max-width: 1140px) {
+    .leasing-offers{
+    &__pricing{
+        &-price,
+        &-economy,
+        &-nds{
+            flex-direction: column;
+            justify-content: start;
+        }
+        &-text{
+            max-width: unset;
+            font-size: 8px;
+        }
+        &-sum{
+            padding: 0;
+            font-size: 13px;
+        }
+    }
+    &__payment{
+        &-btn{
+            padding: 5px 10px;
+            font-size: 10px;
+        }
+    }
+}
+}
+@media(max-width: 1040px){
+    .container{
+        padding: 0 20px;
+    }
+
+    .leasing-offers{
+        &__title{
+            font-size: 34px;
+            line-height: 47px;
+        }
+        &__btn{
+            font-size: 18px;
+            line-height: 22px;
+            padding: 15px 60px 15px 60px;
+        }
+        &__brand{
+            margin-left: unset;
+        }
+        &__item{
+            padding: 40px 20px;
+            flex-direction: column;
+            align-items: center;
+            // border: 0;
+            &:nth-child(odd){
+                border-right: 1px solid #ccc;
+            }
+        }
+        &__inner{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            
+        }
+        &__pricing{
+            max-width: unset;
+        }
+        &__payment{
+            max-width: unset;
+            padding: 20px 0;
+            &-wrap{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 15px;
+            }
+            &-title{
+                margin-bottom: unset;
+                line-height: 29px;
+            }
+        }
+        
+        &__img{
+            max-width: unset;
+            margin-bottom: 20px;
+            img{
+                margin: 0 auto;
+            }
+        }
+        &__brand{
+            text-align: center;
+            &-title{
+                max-width: unset;
+                
+            }
+            &-subtitle{
+                margin-bottom: 10px;
+            }
+            &-compare{
+                padding: 20px 0;
+            }
+        }
+        &__feature{
+            font-size: 17px;
+            line-height: 21px;
+            padding: 20px 0;
+            &-text{
+                max-width: unset;
+                width: 100%;
+            }
+        }
+        &__pricing{
+            &-text{
+                width: unset;
+                font-size: 10px;
+            }
+            &-price,
+            &-economy,
+            &-nds{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+    }
+}
+
+
+    
+@media(max-width: 700px) {
+    .leasing-offers{
+        &__title{
+            font-size: 22px;
+            line-height: 27px;
+        }
+       &__inner{
+        grid-template-columns: 1fr;
+        
+    } 
+    &__img{
+        img{
+            max-width: unset;
+            width: 100%;
+        }
+    }
+    &__item{
+        // border: unset
+        &:nth-child(odd){
+            border-right: unset;
+        }
+    }
+    &__pricing{
+      &-text{
+        font-size: 9px;
+    }
+    &-sum{
+        font-size: 11px;
+    }  
+    }
+    }
+    
+    
+    
+}
+
+@media(max-width: 400px){
+    .container{
+        padding: 0 5px;
+    }
+    .leasing-offers{
+        &__payment-title{
+            line-height: 23px;
+        }
+        &__payment-sum{
+            font-size: 16px;
+            line-height: 23px;
+        }
+    }
+}
