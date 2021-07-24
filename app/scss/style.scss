@@ -1,235 +1,213 @@
 @import "vars";
-@import "fonts";
 @import "reset";
-@import "libs";
-@import "global";// ------- очистить ненужное!!!!
+@import "global";
 
-.leasing-offers{
-    padding: 130px 0 226px;
-    &__title{
-        font-size: 64px;
-        line-height: 77px;
-        font-weight: 700;
-        margin-bottom: 90px;
+.leasing-offers {
+  padding: 130px 0 226px;
+  &__title {
+    font-size: 64px;
+    line-height: 77px;
+    font-weight: 700;
+    margin-bottom: 90px;
+  }
+  &__btn {
+    border: 1px solid $text-color;
+    background: none;
+    padding: 24px 147px 24px 148px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s;
+    &:hover {
+      color: #fff;
+      background-color: $orange;
+      border-color: $orange;
     }
-    &__btn{
-        border: 1px solid $text-color;
-        background: none;
-        padding: 24px 147px 24px 148px;
-        font-size: 18px;
-        line-height: 22px;
-        font-weight: 700;
-        text-align: center;
-        transition: all .3s;
-        &:hover{
-            color: #FFF;
-            background-color: $orange;
-            border-color: $orange;
-        }
+  }
+  &__inner {
+    margin-bottom: 64px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e0e0e0;
+    padding: 40px 0;
+    &:last-child {
+      border-bottom: 1px solid #e0e0e0;
     }
-    &__inner{
-        margin-bottom: 64px;
+  }
+  &__img {
+    max-width: 270px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__brand {
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 420px;
+    width: 100%;
+    margin-left: 30px;
+    &-title {
+      font-size: 36px;
+      line-height: 44px;
+      max-width: 206px;
+      width: 100%;
+      margin-bottom: 8px;
     }
-    &__item{
-        display: flex;
-        justify-content: space-between;
-        border-top: 1px solid #E0E0E0;
-        padding: 40px 0;
-        &:last-child{
-            border-bottom: 1px solid #E0E0E0;
-        }
+    &-subtitle {
+      font-size: 24px;
+      line-height: 29px;
+      color: #828282;
     }
-    &__img{
-        max-width: 270px;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        
+    &-compare {
+      font-size: 14px;
+      line-height: 17px;
+      color: #828282;
+      font-weight: 400;
+      position: relative;
+      cursor: pointer;
+      .checkbox-title {
+        padding-left: 32px;
+      }
+      &:hover {
+        .checkbox-title {
+          transition: all 0.3s;
+          color: $orange;
+        }
+      }
     }
-    &__brand{
-        font-weight: 700;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        max-width: 420px;
-        width: 100%;
-        margin-left: 30px;
-        &-title{
-            font-size: 36px;
-            line-height: 44px;
-            max-width: 206px;
-            width: 100%;
-            margin-bottom: 8px;
-        }
-        &-subtitle{
-            font-size: 24px;
-            line-height: 29px;
-            color: #828282;
-            
-        }
-        &-compare{
-            font-size: 14px;
-            line-height: 17px;
-            color: #828282;
-            font-weight: 400;
-            position: relative;
-            cursor: pointer;
-            .checkbox-title{
-                padding-left: 32px;
-            }
-            &:hover{
-                .checkbox-title{
-                    transition: all .3s;
-                    color: $orange;
-                }
-            }
-            
-        }
 
-
-        &-checkbox{
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            clip: rect(0 0 0 0);
-            
-        }
-        &-checkbox--custom{
-            position: absolute;
-            width: 28px;
-            height: 14px;
-            border: 1px solid #828282;
-            border-radius: 12px;
-            background: #FFFFFF;
-           top: 50%;
-           transform: translateY(-50%);
-           &::before{
-            content: '';
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #828282;
-            position: absolute;
-            left: 0;
-        }
-        
-        }
-        &-checkbox:checked + .leasing-offers__brand-checkbox--custom{
-            border: 1px solid $orange;
-        }
-        &-checkbox:checked + .leasing-offers__brand-checkbox--custom::before{
-            content: '';
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: $orange;
-            position: absolute;
-            left: unset;
-            right: 0;
-        }
-        &-checkbox:checked + .leasing-offers__brand-checkbox--custom + .checkbox-title{
-            color: $orange;
-        }
-
-
+    &-checkbox {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
     }
-    &__feature{
-        font-size: 14px;
-        line-height: 17px;
-        padding-right: 50px;
-        &-text{
-            max-width: 131px;
-            width: 100%;
-        }
+    &-checkbox--custom {
+      position: absolute;
+      width: 28px;
+      height: 14px;
+      border: 1px solid #828282;
+      border-radius: 12px;
+      background: #ffffff;
+      top: 50%;
+      transform: translateY(-50%);
+      &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #828282;
+        position: absolute;
+        left: 0;
+      }
     }
-    &__pricing{
-        max-width: 299px;
-        width: 100%;
-
-
-        display: flex;
-        flex-direction: column;
-
-
-        &-price{
-            display: flex;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-        &-economy{
-            display: flex;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-        &-nds{
-            display: flex;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-        &-text{
-            font-size: 14px;
-            line-height: 17px;
-
-            max-width: 150px;
-            width: 100%;
-        }
-        &-sum{
-           font-size: 18px;
-           line-height: 22px;
-           font-weight: 600; 
-           padding-left: 10px;
-        }
+    &-checkbox:checked + .leasing-offers__brand-checkbox--custom {
+      border: 1px solid $orange;
     }
-    &__empty{
-        max-width: 270px;
-        width: 100%;
+    &-checkbox:checked + .leasing-offers__brand-checkbox--custom::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $orange;
+      position: absolute;
+      left: unset;
+      right: 0;
     }
-    &__payment{
-        max-width: 300px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        &-title{
-            font-size: 18px;
-            line-height: 22px;
-            font-weight: 400;
-            margin-bottom: 9px;
-        }
-        &-sum{
-            font-size: 36px;
-            line-height: 44px;
-            font-weight: 700;
-        }
-        &-btn{
-            border: none;
-            background-color: $text-color;
-            text-align: center;
-            font-size: 18px;
-            line-height: 22px;
-            font-weight: 700;
-            padding: 24px 62px 24px 63px;
-            color: #fff;
-            transition: all .3s;
-            &:hover{
-                background-color: $orange;
-            }
-        }
+    &-checkbox:checked
+      + .leasing-offers__brand-checkbox--custom
+      + .checkbox-title {
+      color: $orange;
     }
+  }
+  &__feature {
+    font-size: 14px;
+    line-height: 17px;
+    padding-right: 50px;
+    &-text {
+      max-width: 131px;
+      width: 100%;
+    }
+  }
+  &__pricing {
+    max-width: 299px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    &-price {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+    &-economy {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+    &-nds {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+    &-text {
+      font-size: 14px;
+      line-height: 17px;
+
+      max-width: 150px;
+      width: 100%;
+    }
+    &-sum {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 600;
+      padding-left: 10px;
+    }
+  }
+  &__empty {
+    max-width: 270px;
+    width: 100%;
+  }
+  &__payment {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-title {
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 400;
+      margin-bottom: 9px;
+    }
+    &-sum {
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 700;
+    }
+    &-btn {
+      border: none;
+      background-color: $text-color;
+      text-align: center;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 700;
+      padding: 24px 62px 24px 63px;
+      color: #fff;
+      transition: all 0.3s;
+      &:hover {
+        background-color: $orange;
+      }
+    }
+  }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @import "media";
-
